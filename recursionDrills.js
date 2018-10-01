@@ -1,3 +1,4 @@
+'use strict';
 // Counting Sheep
 
 // What is the input to the program
@@ -14,12 +15,34 @@
 //`${num - 1} - Another sheep jump over the fence`
 
 function countSheep(num) {
-    if (num === 1) {
-        console.log(`${num} - Another sheep jump over the fence`);
-        return;
-    }
-        console.log(`${num} - Another sheep jump over the fence`);
-        countSheep(num - 1);
+  if (num === 1) {
+    console.log(`${num} - Another sheep jump over the fence`);
+    return;
+  }
+  console.log(`${num} - Another sheep jump over the fence`);
+  countSheep(num - 1);
 }
-
 countSheep(3);
+
+
+// Array Double  
+
+// Our array example = [1, 2, 3]
+// input? : an array
+
+// output? : an Array with every number doubled
+
+// input to each recursive call? : 
+//    array.slice(1)
+
+// output to each recursive call? : 
+//  [(array[0] * 2), ...arrayDouble(array.slice(1))]
+
+function arrayDouble(array) {
+  // base case
+  if (!array.length) {
+    return [];
+  }
+  return [(array[0] * 2), ...arrayDouble(array.slice(1))];
+}
+console.log(arrayDouble([2,4,6]));
