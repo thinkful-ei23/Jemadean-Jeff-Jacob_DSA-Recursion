@@ -25,17 +25,17 @@ function countSheep(num) {
 countSheep(3);
 
 
-// Array Double  
+// Array Double
 
 // Our array example = [1, 2, 3]
 // input? : an array
 
 // output? : an Array with every number doubled
 
-// input to each recursive call? : 
+// input to each recursive call? :
 //    array.slice(1)
 
-// output to each recursive call? : 
+// output to each recursive call? :
 //  [(array[0] * 2), ...arrayDouble(array.slice(1))]
 
 function arrayDouble(array) {
@@ -56,7 +56,7 @@ console.log(arrayDouble([2,4,6]));
 // The string in reverse
 
 // What is the input to each recursive call
-// 
+//
 
 // What is the output of each recursive call
 //
@@ -71,3 +71,28 @@ function reverseString(str) {
 }
 
 console.log(reverseString("Jeff is very smart and Jacob too"));
+
+// nth Triangular Number
+
+// What is the input to the program?
+// A natural number
+
+// What is the output of the program?
+// the nth triangular number
+
+// What is the input to each recursive call?
+// num - 1
+
+// What is the output of each recursive call
+// num + triangularNumber(num - 1)
+
+function triangularNumber (num) {
+    if (num < 1) {
+        return 0;
+    }
+    return num + triangularNumber(num - 1);
+};
+
+console.log(triangularNumber(9));
+
+
