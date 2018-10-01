@@ -94,7 +94,7 @@ function triangularNumber (num) {
 }
 console.log(triangularNumber(9));
 
-// STRING SPLITTER 
+// STRING SPLITTER
 
 // Split a string based upon a separator (similar to String.prototype.split)
 
@@ -117,7 +117,7 @@ console.log(stringSplitter('this is a string', 'is'));
 // BINARY REPRESENTATION
 
 // input = number
-// output = binary represntation of that number
+// output = binary representation of that number
 // input to each recursive call
 // output to each recursive call
 
@@ -132,3 +132,25 @@ function binaryRep(num) {
 }
 
 console.log(binaryRep(25));
+
+// Factorial
+// Write a recursive function that finds the factorial of a given number. The factorial of a number can be found by multiplying that number by each number between itself and one. The factorial of 5 is equal to 5 * 4 * 3 * 2 * 1 = 120
+
+// input = number
+// output = factorial of the input (5!)
+// recursive input = number * (number - 1)
+// recursive output = 3
+
+function factorialize(num) {
+    if (num < 0 ) {
+        return undefined;
+    }
+    if (num === 0) {
+        return 1;
+    }
+    return num * factorialize(num - 1);
+};
+
+console.log(factorialize(5));
+
+
