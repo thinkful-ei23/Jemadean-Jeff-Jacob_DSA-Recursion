@@ -64,13 +64,13 @@ console.log(arrayDouble([2,4,6]));
 function reverseString(str) {
   //base case
   if (str.length === 0) {
-    return "";
+    return '';
   }
   //recursive case
   return str[str.length-1] + reverseString(str.slice(0, str.length -1));
 }
 
-console.log(reverseString("Jeff is very smart and Jacob too"));
+console.log(reverseString('Jeff is very smart and Jacob too'));
 
 // nth Triangular Number
 
@@ -87,12 +87,29 @@ console.log(reverseString("Jeff is very smart and Jacob too"));
 // num + triangularNumber(num - 1)
 
 function triangularNumber (num) {
-    if (num < 1) {
-        return 0;
-    }
-    return num + triangularNumber(num - 1);
-};
-
+  if (num < 1) {
+    return 0;
+  }
+  return num + triangularNumber(num - 1);
+}
 console.log(triangularNumber(9));
 
+// STRING SPLITTER 
 
+// Split a string based upon a separator (similar to String.prototype.split)
+
+// input = string
+// output = array of strings split on 'separator'
+// input to each recursive call
+// output to each recursive call
+
+function stringSplitter(str, separator) {
+  // base case
+  if (str.indexOf(separator) === -1) {
+    return [str];
+  }
+  return [str.substring(0, str.indexOf(separator)), ...stringSplitter(str.slice(str.indexOf(separator) + 1), separator)];
+}
+
+console.log(stringSplitter('this is a string', ' '));
+console.log(stringSplitter('this is a string', 'is'));
