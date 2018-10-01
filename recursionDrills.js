@@ -113,3 +113,22 @@ function stringSplitter(str, separator) {
 
 console.log(stringSplitter('this is a string', ' '));
 console.log(stringSplitter('this is a string', 'is'));
+
+// BINARY REPRESENTATION
+
+// input = number
+// output = binary represntation of that number
+// input to each recursive call
+// output to each recursive call
+
+function binaryRep(num) {
+  //base case
+  if (num <= 0) {
+    return "";
+  }
+  //recursive case
+  const binary =  Math.floor(num % 2);
+  return binaryRep(Math.floor(num/2)) + binary;
+}
+
+console.log(binaryRep(25));
