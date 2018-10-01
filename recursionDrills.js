@@ -46,3 +46,28 @@ function arrayDouble(array) {
   return [(array[0] * 2), ...arrayDouble(array.slice(1))];
 }
 console.log(arrayDouble([2,4,6]));
+
+// Reverse String
+
+// What is the input to the program
+// A string
+
+// What is the output of the program
+// The string in reverse
+
+// What is the input to each recursive call
+// 
+
+// What is the output of each recursive call
+//
+
+function reverseString(str) {
+  //base case
+  if (str.length === 0) {
+    return "";
+  }
+  //recursive case
+  return str[str.length-1] + reverseString(str.slice(0, str.length -1));
+}
+
+console.log(reverseString("Jeff is very smart and Jacob too"));
