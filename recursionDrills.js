@@ -151,7 +151,7 @@ function factorialize(num) {
   return num * factorialize(num - 1);
 }
 
-// console.log(factorialize(5));
+console.log(factorialize(5));
 
 // FIBONACCI
 
@@ -159,18 +159,27 @@ function factorialize(num) {
 // output = sequenced array of fibonacci numbers
 // 1 1 2 3 5 8 13
 
+// function fibonacci(num) {
+//   // base case
+//
+//   if (num === 0 ) {
+//     return 0;
+//   }
+//   if (num === 1 || num === 2) {
+//     return 1;
+//   }
+//   let fibNum = fibonacci(num - 1) + fibonacci(num - 2);
+//   return fibNum;
+// }
+//
+// console.log(fibonacci(7));
+
 function fibonacci(num) {
-  // base case
-  
-  if (num === 0 ) {
-    return 0;
-  }
-  if (num === 1 || num === 2) {
-    return 1;
-  }
-  let fibNum = fibonacci(num - 1) + fibonacci(num - 2);
-  console.log(fibNum);
-  return fibNum;
+    if(num <= 2){
+        return 1;
+    }
+
+    return fibonacci(num-1) + fibonacci(num-2)
 }
 
-console.log(fibonacci(7));
+fibonacci(4);
