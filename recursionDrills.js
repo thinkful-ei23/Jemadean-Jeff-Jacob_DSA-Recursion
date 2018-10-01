@@ -22,7 +22,7 @@ function countSheep(num) {
   console.log(`${num} - Another sheep jump over the fence`);
   countSheep(num - 1);
 }
-countSheep(3);
+// countSheep(3);
 
 
 // Array Double
@@ -45,7 +45,7 @@ function arrayDouble(array) {
   }
   return [(array[0] * 2), ...arrayDouble(array.slice(1))];
 }
-console.log(arrayDouble([2,4,6]));
+// console.log(arrayDouble([2,4,6]));
 
 // Reverse String
 
@@ -70,7 +70,7 @@ function reverseString(str) {
   return str[str.length-1] + reverseString(str.slice(0, str.length -1));
 }
 
-console.log(reverseString('Jeff is very smart and Jacob too'));
+// console.log(reverseString('Jeff is very smart and Jacob too'));
 
 // nth Triangular Number
 
@@ -92,7 +92,7 @@ function triangularNumber (num) {
   }
   return num + triangularNumber(num - 1);
 }
-console.log(triangularNumber(9));
+// console.log(triangularNumber(9));
 
 // STRING SPLITTER
 
@@ -111,8 +111,8 @@ function stringSplitter(str, separator) {
   return [str.substring(0, str.indexOf(separator)), ...stringSplitter(str.slice(str.indexOf(separator) + 1), separator)];
 }
 
-console.log(stringSplitter('this is a string', ' '));
-console.log(stringSplitter('this is a string', 'is'));
+// console.log(stringSplitter('this is a string', ' '));
+// console.log(stringSplitter('this is a string', 'is'));
 
 // BINARY REPRESENTATION
 
@@ -124,14 +124,14 @@ console.log(stringSplitter('this is a string', 'is'));
 function binaryRep(num) {
   //base case
   if (num <= 0) {
-    return "";
+    return '';
   }
   //recursive case
   const binary =  Math.floor(num % 2);
   return binaryRep(Math.floor(num/2)) + binary;
 }
 
-console.log(binaryRep(25));
+// console.log(binaryRep(25));
 
 // Factorial
 // Write a recursive function that finds the factorial of a given number. The factorial of a number can be found by multiplying that number by each number between itself and one. The factorial of 5 is equal to 5 * 4 * 3 * 2 * 1 = 120
@@ -142,15 +142,35 @@ console.log(binaryRep(25));
 // recursive output = 3
 
 function factorialize(num) {
-    if (num < 0 ) {
-        return undefined;
-    }
-    if (num === 0) {
-        return 1;
-    }
-    return num * factorialize(num - 1);
-};
+  if (num < 0 ) {
+    return undefined;
+  }
+  if (num === 0) {
+    return 1;
+  }
+  return num * factorialize(num - 1);
+}
 
-console.log(factorialize(5));
+// console.log(factorialize(5));
 
+// FIBONACCI
 
+// input = number
+// output = sequenced array of fibonacci numbers
+// 1 1 2 3 5 8 13
+
+function fibonacci(num) {
+  // base case
+  
+  if (num === 0 ) {
+    return 0;
+  }
+  if (num === 1 || num === 2) {
+    return 1;
+  }
+  let fibNum = fibonacci(num - 1) + fibonacci(num - 2);
+  console.log(fibNum);
+  return fibNum;
+}
+
+console.log(fibonacci(7));
