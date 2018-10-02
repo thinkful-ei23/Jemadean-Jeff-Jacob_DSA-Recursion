@@ -36,7 +36,7 @@ function countSheep(num) {
 //    array.slice(1)
 
 // output to each recursive call? :
-//  [(array[0] * 2), ...arrayDouble(array.slice(1))]
+//  [(array[0] * 2), ...arrayDouble(array.slice(1))] REMOVE SPREAD OPERATOR, KEEP FIRST PART
 
 function arrayDouble(array) {
   // base case
@@ -161,13 +161,20 @@ function factorialize(num) {
 
 function fibonacci(num) {
   // base case
+  let count = 0;
+  if (num > count) {
+    return [];
+  }
   
   if (num === 0 ) {
     return 0;
   }
   if (num === 1 || num === 2) {
-    return 1;
+    console.log(1);
   }
+  console.log
+
+
   let fibNum = fibonacci(num - 1) + fibonacci(num - 2);
   console.log(fibNum);
   return fibNum;
