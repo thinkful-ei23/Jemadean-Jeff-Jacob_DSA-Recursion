@@ -38,6 +38,7 @@ function countSheep(num) {
 // output to each recursive call? :
 //  [(array[0] * 2), ...arrayDouble(array.slice(1))]
 
+
 function arrayDouble(array) {
   // base case
   if (!array.length) {
@@ -183,3 +184,5 @@ function fibonacci(num) {
 }
 
 fibonacci(4);
+
+
